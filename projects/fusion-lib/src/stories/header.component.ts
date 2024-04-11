@@ -5,7 +5,7 @@ import { ButtonComponent } from './button.component';
 import type { User } from './user';
 
 @Component({
-    selector: 'storybook-header',
+    selector: 'fusion-header',
     standalone: true,
     imports: [CommonModule, ButtonComponent],
     template: `<header>
@@ -29,29 +29,29 @@ import type { User } from './user';
                         Welcome, <b>{{ user.name }}</b
                         >!
                     </span>
-                    <storybook-button
+                    <fusion-button
                         *ngIf="user"
                         size="small"
-                        (onClick)="onLogout.emit($event)"
+                        (clicked)="logout.emit($event)"
                         label="Log out"
-                    ></storybook-button>
+                    ></fusion-button>
                 </div>
                 <div *ngIf="!user">
-                    <storybook-button
+                    <fusion-button
                         *ngIf="!user"
                         size="small"
                         class="margin-left"
-                        (onClick)="onLogin.emit($event)"
+                        (clicked)="login.emit($event)"
                         label="Log in"
-                    ></storybook-button>
-                    <storybook-button
+                    ></fusion-button>
+                    <fusion-button
                         *ngIf="!user"
                         size="small"
                         [primary]="true"
                         class="margin-left"
-                        (onClick)="onCreateAccount.emit($event)"
+                        (clicked)="createAccount.emit($event)"
                         label="Sign up"
-                    ></storybook-button>
+                    ></fusion-button>
                 </div>
             </div>
         </div>
@@ -63,11 +63,11 @@ export class HeaderComponent {
     user: User | null = null;
 
     @Output()
-    onLogin = new EventEmitter<Event>();
+    login = new EventEmitter<Event>();
 
     @Output()
-    onLogout = new EventEmitter<Event>();
+    logout = new EventEmitter<Event>();
 
     @Output()
-    onCreateAccount = new EventEmitter<Event>();
+    createAccount = new EventEmitter<Event>();
 }
