@@ -18,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
             },
             {
                 "name": "LoggedIn",
@@ -28,7 +28,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
             },
             {
                 "name": "LoggedIn",
@@ -38,7 +38,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
             },
             {
                 "name": "LoggedOut",
@@ -68,7 +68,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        backgroundColor: {\n            control: 'color'\n        }\n    },\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n    args: { clicked: fn() }\n}"
             },
             {
                 "name": "meta",
@@ -78,7 +78,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    },\n    args: {\n        login: fn(),\n        logout: fn(),\n        createAccount: fn()\n    }\n}"
             },
             {
                 "name": "meta",
@@ -88,7 +88,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
             },
             {
                 "name": "preview",
@@ -98,7 +98,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        }\n    }\n}"
             },
             {
                 "name": "Primary",
@@ -108,7 +108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button'\n    }\n}"
             },
             {
                 "name": "Secondary",
@@ -118,7 +118,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Button'\n    }\n}"
             },
             {
                 "name": "Small",
@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
             }
         ],
         "functions": [],
@@ -178,7 +178,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -188,7 +188,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                    "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        backgroundColor: {\n            control: 'color'\n        }\n    },\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n    args: { clicked: fn() }\n}"
                 },
                 {
                     "name": "Primary",
@@ -198,7 +198,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button'\n    }\n}"
                 },
                 {
                     "name": "Secondary",
@@ -208,7 +208,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Button'\n    }\n}"
                 },
                 {
                     "name": "Small",
@@ -218,7 +218,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
                 }
             ],
             "projects/fusion-lib/src/stories/header.stories.ts": [
@@ -230,7 +230,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -250,7 +250,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                    "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    },\n    args: {\n        login: fn(),\n        logout: fn(),\n        createAccount: fn()\n    }\n}"
                 }
             ],
             "projects/fusion-lib/src/stories/page.stories.ts": [
@@ -262,7 +262,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -282,7 +282,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
                 }
             ],
             "projects/fusion-lib/.storybook/preview.ts": [
@@ -294,7 +294,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        }\n    }\n}"
                 }
             ]
         },
